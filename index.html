@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DPT Clinic Medical Records Scanner</title>
+  <title>DP Clinic Medical Records Scanner</title>
 
   <script src="https://unpkg.com/html5-qrcode"></script>
 
@@ -386,13 +386,17 @@
     Bounty Plus Inc. | Employee Medical Records & Compliance Monitoring
   </div>
 
-  <>
+
+  <!-- IMPORTANT: CORRECT SCRIPT OPENING TAG -->
+
+  <script>
 
     // ==========================================
     // CONFIGURATION
     // ==========================================
 
-    // INOZA / DPT Google Apps  Web App URL
+    // Existing Apps Script Web App URL supplied by you.
+
     let API_URL = "https://script.google.com/macros/s/AKfycbxp7sYlxQDcF9iX_Ql09SVyrCIF6gjS7nwaVv8jdw0HbHLbS9qQiRDYop2lxXp4KRGdsQ/exec";
 
 
@@ -616,7 +620,6 @@
 
       setStatus("healthCardStatus", result.healthCardStatus);
 
-      // Supports either property name from Apps Script
       setText(
         "healthCardIssueDate",
         result.healthCardIssueDate || result.healthCardIssue
@@ -758,8 +761,6 @@
 
         return;
       }
-
-      // Only allow normal web links
 
       let parsedURL = null;
 
